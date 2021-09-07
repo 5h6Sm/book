@@ -1,0 +1,31 @@
+package project;
+
+import java.util.Scanner;
+public class Main extends book {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		book b1 = new book();
+		while(true) {
+			int choose = show_menu();
+			switch(choose) {
+				case 1 : continue;
+				case 2 : b1.set_book(); 
+						System.out.println(b1); break;
+				case 3 : continue;
+				case 4 : break;
+			}
+			if(choose==4) break;
+		}
+	}
+	public static int show_menu() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("1 : 책찾기\n2 : 책 등록하기\n3 : 책 삭제하기\n4 : 종료하기");
+		System.out.print("메뉴를 선택해주세요(숫자입력) : ");
+		int choose = scan.nextInt();
+		
+		return choose;
+	}
+
+}
