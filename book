@@ -1,0 +1,81 @@
+package project;
+
+import java.util.Scanner;
+public class book {
+	private String title;
+	private String info;
+	private int page;
+	private String writer;
+	private String genre;
+	Scanner scan = new Scanner(System.in);
+	
+	public static void book() {
+		
+	}
+	
+	public void set_title() {
+		System.out.print("책제목을 입력하세요 : ");
+		String title = scan.nextLine();
+		this.title = title;
+	}
+	public String get_title() {
+		return this.title;
+	}
+	
+	
+	public void set_info() {
+		System.out.print("정보을 입력하세요 : ");
+		String info = scan.nextLine();
+		this.info = info;
+	}
+	public String get_info() {
+		return this.info;
+	}
+	
+	
+	public void set_page() {
+		System.out.print("페이지를 입력하세요 : ");
+		int page = scan.nextInt();
+		this.page = page;
+	}
+	public int get_page() {
+		return this.page;
+	}
+	
+	
+	public void set_writer() {
+		System.out.print("작가를 입력하세요 : ");
+		String writer = scan.nextLine();
+		this.writer = writer;
+	}
+	public String get_writer() {
+		return this.writer;
+	}
+	
+	
+	public void set_genre() {
+		System.out.print("장르를 입력하세요 : ");
+		String genre = scan.nextLine();
+		this.genre = genre;
+	}
+	public String get_genre() {
+		return this.genre;
+	}
+	
+	public void set_book() {
+		this.set_genre();
+		this.set_title();
+		this.set_writer();
+		this.set_page();
+		this.set_info();
+	}
+
+	@Override
+	public String toString() {
+		return "book [책제목" + title + ", 정보=" + info + ", 페이지=" + page + ", 작가=" + writer + ", 장르=" + genre
+				+ "]";
+	}
+	
+	
+	
+}
